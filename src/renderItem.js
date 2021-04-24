@@ -3,5 +3,5 @@ import {Item} from "./Item";
 
 
 export const renderItem = ({ item }) => (
-    <Item title={item.title} id={item.id} releaseYear={item.releaseYear} />
+    <Item name={item.name} email={item.email} />
 );

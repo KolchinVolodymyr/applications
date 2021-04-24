@@ -1,11 +1,20 @@
 import React from 'react';
-import { StyleSheet, Text, View} from 'react-native';
+import { StyleSheet, Text, View, Image, Button} from 'react-native';
 
-export const Item = ({ title, id, releaseYear }) => (
-    <View style={styles.item}>
-      <Text style={styles.title}>Id:{id} {title}</Text>
-        <Text style={styles.title}>Id:{id}</Text>
-        <Text style={styles.releaseYear}>Release Year:{releaseYear}</Text>
+export const Item = ({ name, id, email,navigation  }) => (
+    <View style={styles.item}  button >
+        <Image
+            style={styles.tinyLogo}
+            source={{
+                uri: 'https://reactnative.dev/img/tiny_logo.png',
+            }}
+        />
+        <Text style={styles.title}>{name}</Text>
+        <Text style={styles.email}>{email}</Text>
+        {/*<Button*/}
+        {/*    title="Go to Profile"*/}
+        {/*    onPress={() => navigation.navigate('Profile')}*/}
+        {/*/>*/}
     </View>
 );
 
@@ -17,6 +26,10 @@ const styles = StyleSheet.create({
         marginHorizontal: 16,
     },
     title: {
-        fontSize: 32,
+        fontSize: 22,
+    },
+    tinyLogo: {
+        width: 50,
+        height: 50,
     },
 });

@@ -4,6 +4,7 @@ import { StyleSheet, Text, View} from 'react-native';
 export const Item = ({ title, id, releaseYear }) => (
     <View style={styles.item}>
       <Text style={styles.title}>Id:{id} {title}</Text>
+        <Text style={styles.title}>Id:{id}</Text>
         <Text style={styles.releaseYear}>Release Year:{releaseYear}</Text>
     </View>
 );
